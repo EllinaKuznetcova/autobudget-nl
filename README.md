@@ -20,8 +20,14 @@ node verify-rdw.cjs
 
 ## Публикация
 
-GitHub Pages публикует содержимое `dist/` после успешных проверок при отправке изменений в `main`.
-В Settings → Pages источником должен быть GitHub Actions.
+Cloudflare Pages автоматически публикует `dist/` при отправке изменений в `main`.
+Команда сборки: `node verify.cjs && node verify-rdw.cjs`.
+Адрес: https://autobudget-nl.pages.dev/
+
+Основной адрес и `*.autobudget-nl.pages.dev` защищены Cloudflare Access.
+Вход — через Google; доступ определяется списком разрешённых email в политике Access.
+OAuth-секрет хранится только в Cloudflare, не в репозитории.
+GitHub Actions запускает проверки без публикации на GitHub Pages.
 
 ## Ограничения данных
 
